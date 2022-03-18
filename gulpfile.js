@@ -4,8 +4,6 @@ import {
 } from './gulp/config/path.js';
 import { plugins } from './gulp/config/plagins.js';
 
-
-
 global.app = {
   path: path,
   gulp: gulp,
@@ -15,15 +13,19 @@ global.app = {
 import { reset } from './gulp/tascs/reset.js';
 import { copy } from './gulp/tascs/copy.js';
 import { html } from './gulp/tascs/html.js';
+import { server } from './gulp/tascs/server.js';
+import { scss } from './gulp/tascs/scss.js';
+
 
 function watcher() {
   gulp.watch(path.watch.files, copy)
   gulp.watch(path.watch.html, html)
+  gulp.watch(path.watch.scss, scss)
 }
 
-const mainTasks = gulp.parallel(copy, html);
+const mainTasks = gulp.parallel(copy, html, scss);
 
-const dev = gulp.series(reset, mainTasks, watcher);
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
 gulp.task('default', dev);
 
