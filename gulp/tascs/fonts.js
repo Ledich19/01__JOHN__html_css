@@ -51,10 +51,13 @@ export const fontStyle = () => {
         for (let i = 0; i < fontsFiles.length; i++) {
 
           let fontFileName = fontsFiles[i].split('.')[0];
+          console.log(`000000${fontFileName}`);
+
           if (newFileOnly !== fontFileName) {
-            let fontNmae = fontFileName.split('-')[0] ? fontFileName.split('-' [0]) : fontFileName;
-            let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-' [1]) : fontFileName;
-           
+            let fontNmae = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
+            let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName;
+            console.log(`1111111${fontNmae}`);
+            console.log(`222222${fontWeight}`);
             if (fontWeight.toLowerCase() === 'thin') {
               fontWeight = 100;
             } else if (fontWeight.toLowerCase() === 'extralight') {

@@ -1,12 +1,65 @@
 @import "fonts";
+@import "icons";
+
+* {
+  font-family: Heebo;
+}
+
+//<ПЕРЕМЕННЫЕ>==================================
+$minWidht: 320px;
+$maxWidht: 1152;
+$maxWidhtConteiner: 856;
+$md1: $maxWidhtConteiner+12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//<ПЕРЕМЕННЫЕ>==================================
+
+//<обнуление общие параметры>===================
+@import "null";
 
 body {
-  background-color: rgb(47, 85, 209);
-  font-family: BriosoPro ;
-  font-size: 50px;
+  color: #000;
+  font-size: 14px;
 
-  span {
-    color: white;
+  &._lock {
+    overflow: hidden;
   }
-  background: url('@img/roapk5pti0j81.jpg') 0 0 no-repeat;
 }
+
+//<обнуление общие параметры>===================
+
+//<ОБОЛОЧКА>===================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &._loaded {}
+}
+
+//<ОБОЛОЧКА>===================
+//<ОСНОВНАЯ СЕТКА>===================
+._conttainer {
+  min-width: $maxWidhtConteiner + px;
+  margin: 0 auto;
+
+  @media (max-width: #{$md1}px) {
+    max-width: 970px;
+  }
+
+  @media (max-width: #{$md2}px) {
+    max-width: 750px;
+  }
+
+  @media (max-width: #{$md3}px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+//<ОСНОВНАЯ СЕТКА>===================
+
+@import "header";
