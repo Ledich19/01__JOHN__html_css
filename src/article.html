@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/_head.html',{
+'title': "HomePage"
+})
+
+<body>
+  @@include('html/_header.html',{
+  "link": "1"
+  })
+  <main class="page">
+
+    <section class="article">
+      <div class="article__title title">Designing Dashboards with usability in mind</div>
+      <div class="article__info">
+        <div class="article__year">2020</div>
+        <div class="article__category">Designing Dashboards with usability in mind</div>
+      </div>
+      <div class="article__text">
+        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+          officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </p>
+        <img src="@img/article/01.jpg" alt="">
+        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+          officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </p>
+        <img src="@img/article/02.jpg" alt="">
+        <img src="@img/article/03.jpg" alt="">
+      </div>
+
+    </section>
+
+
+
+  </main>
+  @@include('html/_footer.html',{})
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
