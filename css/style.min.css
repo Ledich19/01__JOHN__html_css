@@ -1,0 +1,334 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-Black.woff2") format("woff2"), url("../fonts/Heebo-Black.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-Bold.woff2") format("woff2"), url("../fonts/Heebo-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-Light.woff2") format("woff2"), url("../fonts/Heebo-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-ExtraBold.woff2") format("woff2"), url("../fonts/Heebo-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-ExtraLight.woff2") format("woff2"), url("../fonts/Heebo-ExtraLight.ttf") format("ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-Regular.woff2") format("woff2"), url("../fonts/Heebo-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-Medium.woff2") format("woff2"), url("../fonts/Heebo-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-Thin.woff2") format("woff2"), url("../fonts/Heebo-Thin.ttf") format("ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: Heebo;
+  font-display: swap;
+  src: url("../fonts/Heebo-SemiBold.woff2") format("woff2"), url("../fonts/Heebo-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=_icon-]:before,
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+}
+
+[class^=_icon-]:before,
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-fb:before {
+  content: "\e900";
+}
+
+._icon-insta:before {
+  content: "\e901";
+}
+
+._icon-Linkedin:before {
+  content: "\e902";
+}
+
+._icon-tvit:before {
+  content: "\e903";
+}
+
+* {
+  font-family: Heebo;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.bigred {
+  font-size: 20px;
+  color: red;
+}
+
+body {
+  color: #000;
+  font-size: 14px;
+}
+body._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+._conttainer {
+  min-width: 856px;
+  margin: 0 auto;
+}
+@media (max-width: 868px) {
+  ._conttainer {
+    max-width: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  ._conttainer {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  ._conttainer {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+.header__content {
+  max-width: 1052px;
+  margin: 0 auto;
+  padding: 0 6px;
+}
+.header__menu {
+  padding: 10px 0;
+  height: 82px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 767.98px) {
+  .header__menu {
+    height: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .menu__body {
+    transform: translate(0px, -100%);
+    transition: transform 0.08s ease 0s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    padding: 60px 10px 30px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .menu__body._active {
+    transform: translate(opx, 0%);
+  }
+}
+.menu__list li {
+  margin: 0 0 30px 0;
+}
+.menu__list li:last-child {
+  margin: 0 0 0 0;
+}
+@media (min-width: 767.98px) {
+  .menu__list {
+    margin: 0 33px 0 0px;
+    display: flex;
+  }
+  .menu__list li {
+    margin: 0 33px 0 0;
+  }
+}
+.menu__link {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease 0s;
+}
+@media (min-width: 991.98px) {
+  .menu__link:hover {
+    color: #FF6464;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu__link {
+    font-size: 40px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.icon-menu {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .icon-menu span {
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 1px);
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .icon-menu span:first-child {
+    top: 0;
+  }
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0;
+  }
+  .icon-menu._active span {
+    transform: scale(0);
+  }
+  .icon-menu._active span:first-child {
+    transform: rotate(45deg);
+    top: calc(50% - 1px);
+  }
+  .icon-menu._active span:last-child {
+    transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
+}
